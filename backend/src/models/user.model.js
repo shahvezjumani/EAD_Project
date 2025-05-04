@@ -116,8 +116,8 @@ const userSchema = new Schema(
       default: "",
     },
     verifyOtpExpiry: {
-      type: Date,
-      default: Date.now,
+      type: Number,
+      default: 0,
     },
     isVerfied: {
       type: Boolean,
