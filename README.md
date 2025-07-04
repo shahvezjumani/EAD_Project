@@ -7,12 +7,12 @@ I'm excited to present my latest project—a fully **Editable Portfolio Builder 
 - **React.js:** For building an interactive and dynamic user interface.
 - **Tailwind CSS:** For sleek and responsive styling.
 - **JavaScript, HTML, CSS:** Core technologies for structure, logic, and styling.
-- **Local Storage:** To save user data locally, ensuring a seamless and persistent experience for future visits.
+- **Database:** To save user data, ensuring a seamless and persistent experience for future visits.
 
 ## 🛠️ Key Features
 - **Editable Sections:** Users can customize their profile picture, bio, skills, projects, and more.
 - **Theme Selector:** Multiple color themes to match personal branding.
-- **Data Persistence:** All changes are saved in the browser using local storage.
+- **Data Persistence:** All changes are saved in the Database .
 - **User-Friendly Interface:** Intuitive design for easy editing and navigation.
 
 ## 📸 Video
@@ -25,36 +25,94 @@ I'm excited to present my latest project—a fully **Editable Portfolio Builder 
 ### Prerequisites
 - Node.js and npm installed
 
-### Installation
-1. Clone the repository:
+### 🚀 Installation
+
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/shahvezjumani/Portfolio_builder_web_app
-   cd Portfolio_builder_web_app
+   git clone https://github.com/shahvezjumani/EAD_Project
+   cd EAD_Project
    ```
 
-2. Install dependencies:
+2. **Install frontend dependencies:**
    ```bash
+   cd Editable-Portfolio
    npm install
    ```
 
-3. Start the development server:
+3. **Install backend dependencies:**
    ```bash
-   npm run dev
+   cd ../backend
+   npm install
    ```
 
-The app will run locally at `http://localhost:3000`.
+4. **Configure environment variables:**
 
-## 📂 Folder Structure
+   Create `.env` files in both the frontend and backend directories. Sample files are provided with empty values.
+
+   - For **frontend** (`Editable-Portfolio/.env`):
+     ```env
+     VITE_BACKEND_URL=http://localhost:<your-backend-port>
+     ```
+
+   - For **backend** (`backend/.env`):
+     ```env
+     PORT=
+     MONGODB_URI=
+     CORS_ORIGIN=
+     ACCESS_TOKEN_SECRET=
+     ACCESS_TOKIN_EXPIRY=
+     REFRESH_TOKEN_SECRET=
+     REFRESH_TOKIN_EXPIRY=
+     CLOUDINARY_CLOUD_NAME=
+     CLOUDINARY_API_KEY=
+     CLOUDINARY_API_SECRET=
+     NODE_ENV=
+     SMTP_USER=
+     SMTP_PASSWORD=
+     SMTP_EMAIL=
+     ```
+
+   > ⚠️ Replace the above values with your actual environment credentials.
+
+5. **Run the backend server:**
+   ```bash
+   cd backend
+   npm run dev
+   ```
+   The backend should now be running at `http://localhost:5000`.
+
+6. **Run the frontend app:**
+
+   Open a **new terminal**:
+   ```bash
+   cd Editable-Portfolio
+   npm run dev
+   ```
+   The frontend should now be running at `http://localhost:5173`.
+
+---
+
+### 📂 Folder Structure
+
 ```
-├── public
-├── src
-│   ├── components
-│   ├── assets
-│   └── App.js
+EAD_Project
+├── backend
+│   ├── controllers
+│   ├── models
+│   ├── routes
+│   └── server.js
+├── Editable-Portfolio
+│   ├── public
+│   ├── src
+│   │   ├── components
+│   │   ├── pages
+│   │   └── App.jsx
 ├── .gitignore
-├── package.json
-└── README.md
+├── README.md
+└── package.json
 ```
+
+✅ You now have both frontend and backend running locally. Customize the code and `.env` files as needed!
 
 ## 🛠️ Customization
 - **Profile Picture & Bio:** Upload an image and write your bio directly in the app.

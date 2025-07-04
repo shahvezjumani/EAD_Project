@@ -63,5 +63,6 @@ export default {
     },
   },
   plugins: [tailwindScrollbar],
-}
+};
+
 
